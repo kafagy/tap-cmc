@@ -33,21 +33,25 @@ This tap:
 ```
 
 # Build steps to get the tap running
-## Clone the repo
+1. Clone the repo
 
-$ `git clone git@github.com:kafagy/tap-cmc.git`
+&emsp;&emsp;&emsp;&emsp;  $ `git clone git@github.com:kafagy/tap-cmc.git`
 
-## Install the project as a python package
+2. Add the CoinMarketCap API key in the `config.json` file
+3. Install the project as a python package
 
-$ `pip3 install -e .`
+&emsp;&emsp;&emsp;&emsp; $ `pip3 install -e .`
 
-## Run the tap in discovery mode
+4. Run the tap in discovery mode
 
-$ `tap-cmc -c config.json --discover > catalog.json`
+&emsp;&emsp;&emsp;&emsp; $ `tap-cmc -c config.json --discover > catalog.json`
 
-## Edit `catalog.json` to select stream
- Edit the `catalog.json` to select the `cmc_listings_stream` by adding the key value pair `"selected": true` under the `schema` key. 
+5.  Edit `catalog.json` to select stream
 
-## Run the tap in sync mode
+6. Edit the `catalog.json` to select the `cmc_listings_stream` 
 
-$ `tap-cmc -c config.json --catalog catalog.json`
+&emsp;&emsp;&emsp;&emsp; Add the key value pair `"selected": true` under the `schema` key. 
+
+6. Run the tap in sync mode
+
+&emsp;&emsp;&emsp;&emsp; $ `tap-cmc -c config.json --catalog catalog.json`

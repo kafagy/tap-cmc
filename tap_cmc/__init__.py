@@ -14,10 +14,8 @@ from singer.schema import Schema
 REQUIRED_CONFIG_KEYS = ["url", "api_key", "start", "limit", "convert"]
 LOGGER = singer.get_logger()
 
-
 def get_abs_path(path):
     return os.path.join(os.path.dirname(os.path.realpath(__file__)), path)
-
 
 def load_schemas():
     """ Load schemas from schemas folder """
@@ -29,13 +27,10 @@ def load_schemas():
             schemas[file_raw] = Schema.from_dict(json.load(file))
     return schemas
 
-
 def discover():
-
     raw_schemas = load_schemas()
     streams = []
     for stream_id, schema in raw_schemas.items():
-        # TODO: populate any metadata and stream's key properties here..
         stream_metadata = []
         key_properties = []
         streams.append(
@@ -55,7 +50,6 @@ def discover():
             )
         )
     return Catalog(streams)
-
 
 def sync(config, state, catalog):
     """ Sync data from tap source """
@@ -109,7 +103,6 @@ def sync(config, state, catalog):
             LOGGER.error(e)
     return
 
-
 @utils.handle_top_exception(LOGGER)
 def main():
     # Parse command line arguments
@@ -126,7 +119,6 @@ def main():
         else:
             catalog = discover()
         sync(args.config, args.state, catalog)
-
 
 if __name__ == "__main__":
     main()
