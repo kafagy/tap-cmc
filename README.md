@@ -8,14 +8,14 @@ This tap:
 
 - Pulls raw data from [CoinMarketCap](https://coinmarketcap.com/)
 - Extracts the following resources from the listing of the top 50 coins on coinmarketcap's website:
-  - name
-  - symbol
-  - cmc_rank
-  - price
-  - last_updated
-  - market_cap
-  - volume_24h
-  - timestamp
+  - `name`
+  - `symbol`
+  - `cmc_rank`
+  - `price`
+  - `last_updated`
+  - `market_cap`
+  - `volume_24h`
+  - `timestamp`
  - Outputs the schema for each resource
 
 # Schema of the data getting pulled down
@@ -33,8 +33,9 @@ This tap:
 ```
 # Prerequisites
 
-1. Access to CoinMarketCap API key
-2. Python 3
+1. Access to [CoinMarketCap API key](https://coinmarketcap.com/api/) 
+2. [Python 3](https://www.python.org/downloads/)
+3. Python virtualenv (optional)
 
 
 # Build steps to get the tap running
