@@ -1,0 +1,14 @@
+{
+    "type": ["null", "object"],
+    "additionalProperties": false,
+    "properties":   {
+        "name":         {"type": "string"},
+        "symbol":       {"type": "string"},
+        "cmc_rank":     {"type": "integer"},
+        "price":        {"type": "number"},
+        "last_updated": {"type": "string", "format": "date-time"},
+        "market_cap":   {"type": "integer"},
+        "volume_24h":   {"type": "integer"},
+        "timestamp":    {"type": "string", "format": "date-time"}
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "cmc_listings_stream",
+      "key_properties": [],
+      "schema": {
+        "selected": true,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "cmc_rank": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "number"
+          },
+          "last_updated": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "market_cap": {
+            "type": "integer"
+          },
+          "volume_24h": {
+            "type": "integer"
+          },
+          "timestamp": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "cmc_listings_stream",
+      "metadata": []
+    }
+  ]
+}
