@@ -1,0 +1,7 @@
+{
+  "url": "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
+  "api_key": "",
+  "start": "1",
+  "limit": "50",
+  "convert": "USD"          
+}
