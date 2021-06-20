@@ -18,7 +18,7 @@ This tap:
   - timestamp
  - Outputs the schema for each resource
 
-## Schema of the data getting pulled down
+# Schema of the data getting pulled down
 ```
 {
   "name":         {"type": "string"},
@@ -32,21 +32,22 @@ This tap:
 }
 ```
 
-## Build steps to get the tap running
-Clone the repo
+# Build steps to get the tap running
+## Clone the repo
 
-`git clone git@github.com:kafagy/tap-cmc.git`
+$ `git clone git@github.com:kafagy/tap-cmc.git`
 
-Install the project as a python package
+## Install the project as a python package
 
-`pip install -e .`
+$ `pip3 install -e .`
 
-Run the tap in discovery mode
+## Run the tap in discovery mode
 
-`tap-cmc -c config.json --discover > catalog.json`
+$ `tap-cmc -c config.json --discover > catalog.json`
 
-Edit the `catalog.json` to select the `cmc_listings_stream` by adding the key value pair `"selected": true` under the `schema` key 
+## Edit `catalog.json` to select stream
+ Edit the `catalog.json` to select the `cmc_listings_stream` by adding the key value pair `"selected": true` under the `schema` key. 
 
-Run the tap in sync mode
+## Run the tap in sync mode
 
-`tap-cmc -c config.json --catalog catalog.json`
+$ `tap-cmc -c config.json --catalog catalog.json`
