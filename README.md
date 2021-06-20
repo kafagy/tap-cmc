@@ -31,6 +31,11 @@ This tap:
   "timestamp":    {"type": "string", "format": "date-time"}
 }
 ```
+# Prerequisites
+
+1. Access to CoinMarketCap API key
+2. Python 3
+
 
 # Build steps to get the tap running
 1. Clone the repo
@@ -40,15 +45,13 @@ This tap:
 2. Add the CoinMarketCap API key in the `config.json` file
 3. Install the project as a python package
 
-&emsp;&emsp;&emsp;&emsp; $ `pip3 install -e .`
+&emsp;&emsp;&emsp;&emsp; $ `sudo pip3 install -e .`
 
 4. Run the tap in discovery mode
 
 &emsp;&emsp;&emsp;&emsp; $ `tap-cmc -c config.json --discover > catalog.json`
 
-5.  Edit `catalog.json` to select stream
-
-6. Edit the `catalog.json` to select the `cmc_listings_stream` 
+5. Edit the `catalog.json` to select the `cmc_listings_stream` 
 
 &emsp;&emsp;&emsp;&emsp; Add the key value pair `"selected": true` under the `schema` key. 
 
