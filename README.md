@@ -35,7 +35,7 @@ This tap:
 ## Build steps to get the tap running
 Clone the repo
 
-`git clone`
+`git clone git@github.com:kafagy/tap-cmc.git`
 
 Install the project as a python package
 
@@ -45,7 +45,7 @@ Run the tap in discovery mode
 
 `tap-cmc -c config.json --discover > catalog.json`
 
-Edit the catalog.json to select the `cmc_listings_stream` by adding the key value pair `"selected": true` under the `schema` key 
+Edit the `catalog.json` to select the `cmc_listings_stream` by adding the key value pair `"selected": true` under the `schema` key 
 
 Run the tap in sync mode
 

@@ -62,10 +62,8 @@ def sync(config, state, catalog):
     print(config)
     for stream in catalog.get_selected_streams(state):
         LOGGER.info("Syncing stream:" + stream.tap_stream_id)
-
-        LOGGER.info(stream.tap_stream_id)
         LOGGER.info(stream.schema)
-        LOGGER.info(stream.key_properties)
+
         singer.write_schema(
             stream_name=stream.tap_stream_id,
             schema=stream.schema.to_dict(),
@@ -73,6 +71,7 @@ def sync(config, state, catalog):
         )
 
         url = config['url']
+        
         parameters = {
             'start': config['start'],
             'limit': config['limit'],
